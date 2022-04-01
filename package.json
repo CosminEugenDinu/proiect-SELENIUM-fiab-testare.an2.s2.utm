@@ -1,0 +1,31 @@
+{
+  "name": "proiect-selenium-fiab-testare.an2.s2.utm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:dev": "tsc && { tsc --watch & nodemon; }"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CosminEugenDinu/proiect-SELENIUM-fiab-testare.an2.s2.utm.git"
+  },
+  "author": "Eugen Cosmin Dinu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CosminEugenDinu/proiect-SELENIUM-fiab-testare.an2.s2.utm/issues"
+  },
+  "homepage": "https://github.com/CosminEugenDinu/proiect-SELENIUM-fiab-testare.an2.s2.utm#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@types/selenium-webdriver": "^4.0.18",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.1.1"
+  }
+}
