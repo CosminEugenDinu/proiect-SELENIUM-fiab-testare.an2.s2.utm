@@ -16,9 +16,7 @@ const chromeFlags = [
   "--disable-dev-shm-usage",
   "--remote-debugging-port=9222",
 ];
-
 chromeOptions.addArguments(...chromeFlags);
-
 (async () => {
   const driver = await new Builder()
     .forBrowser("chrome")
@@ -27,15 +25,13 @@ chromeOptions.addArguments(...chromeFlags);
   try {
     await driver.get("https://www.google.com");
     const title = await driver.getTitle();
-    console.log(title);
+    console.log("Titlu website: ", title);
     const screenShot_strBase64 = await driver.takeScreenshot();
     await fs.writeFile(
-      path.join(__dirname, "../screen-shot.png"),
+      path.join(__dirname, "../screenshots/google.png"),
       screenShot_strBase64,
       "base64"
     );
-  } catch (e) {
-    console.log(e);
   } finally {
     await driver.quit();
   }
